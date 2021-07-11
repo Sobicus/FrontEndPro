@@ -3,7 +3,7 @@
 const obj = {name: 'Alina', age: 23, adress: {country: 'UA', city: 'Kyiv'}};
 
 
-1st work example
+//1st work example
 const objCopy = JSON.parse(JSON.stringify(obj));
 console.table(objCopy);
 
@@ -35,3 +35,19 @@ console.table(objCopy);
 // for ( let key in obj) {
 //     objCopy[key] = obj[key]
 // }
+
+//5ts правильный вариант решения
+function deepCloneObject(obj) {
+    let newObj = {};
+    for (let key in obj) {
+        if (typeof obj[key] === "object" && obj[key] !== null) { 
+            newObj[key] = deepCloneObject(obj[key]);
+        } else {
+            newObj[key] = obj[key];
+        }
+    }
+    return newObj;
+}
+
+const deepClonePerson = deepCloneObject(obj);
+console.table(deepClonePerson);
