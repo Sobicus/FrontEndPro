@@ -1,4 +1,4 @@
-let allTdRevenueValue = document.querySelectorAll("[data-id=revenue-value]");
+let allTdReveыnueValue = document.querySelectorAll("[data-id=revenue-value]");
 
 function convertToTheNumbers(value) {
   if (value[value.length - 1] === "B") {
