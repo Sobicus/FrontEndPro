@@ -1,0 +1,76 @@
+html {
+  margin: 0 px;
+  padding: 0 px;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12,
+    #cf9b00,
+    #bd5022,
+    #831836,
+    #37052c
+  );
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  font-family: fantasy;
+  font-size: 50px;
+  text-shadow: 0px 1px 1px #bbb,
+    0px 2px 0px #999,
+    0px 3px 0px #888,
+    0px 4px 0px #777,
+    0px 5px 0px #666,
+    0px 6px 0px #555,
+    0px 7px 0px #444,
+    0px 8px 0px #333,
+    0px 9px 7px #302314;
+}
+#textInput {
+  border-radius: 15px;
+  border-color: #04a3ff;
+  background: #6ef3dd;
+}
+#send {
+  border-radius: 15px;
+  border-color: #04a3ff;
+  background: #6ef3dd;
+}
+#purification {
+    border-radius: 15px;
+    border-color: #04a3ff;
+    background: #8eaadd;
+}
+ul li {
+  font-size: 20px;
+  list-style-image: url(img/pokemon-go.png);
+}
+li button{
+    margin: 10px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    background-color: red;
+    background-image: url(img/close-thick.png);
+    background-position-x: -3px;
+    background-position-y: -3px;
+}
+.red{
+    background: rgb(245, 5, 5);
+}
+.green{
+    background: rgb(13, 194, 13);
+}
+#nonStyle li{
+  font-size: 15px;
+  list-style-image: none;
+}
