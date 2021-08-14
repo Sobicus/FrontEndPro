@@ -1,0 +1,27 @@
+html{
+    background-color: brown;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#userLogin{
+    margin: 20px;
+}
+#greetings {
+    display: none;
+    margin: 20px;
+    color: aqua;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+#textInput{
+    border-radius: 25px;
+    background-color: cornflowerblue;
+}
+#myButton{
+    border-radius: 25px;
+    background-color: rgb(255, 157, 29);
+}
