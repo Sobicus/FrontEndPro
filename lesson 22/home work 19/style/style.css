@@ -1,0 +1,22 @@
+html {
+  background: #000;
+}
+#clock {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 15vmax;
+  background-color: #2aa5a0;
+  background-image: linear-gradient(
+    90deg,
+    #f70010,
+    rgb(9, 211, 60),
+    rgb(5, 20, 226),
+    #c90798
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
