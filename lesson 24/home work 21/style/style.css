@@ -1,0 +1,14 @@
+.title {
+  color: rgb(0, 102, 255);
+}
+button {
+  box-shadow: 5px 3px 4px 2px rgb(77, 74, 74);
+  background: cadetblue;
+  border-radius: 25px;
+}
+body {
+  background-color: rgb(207, 137, 44);
+}
+hr {
+  box-shadow: 5px 3px 4px 2px rgb(77, 74, 74);
+}
