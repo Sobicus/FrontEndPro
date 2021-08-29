@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" async></script>
+</head>
+<body>
+    <input type="text" class="inputCity" style="clear: right">
+    <button class="buttonWether" style="clear: right">Wether</button>
+
+    <div id="weatherContainer"></div>
+
+    <script type="text/template" id="wetherTemplate">
+        <div>
+            <h3 class="title">Weather in {{name}}</h3>
+            <p class="completed">Longitude: {{lon}}°</p>
+            <p class="completed">Latitude: {{lat}}°</p>
+            <p class="completed">Weather: {{main}} <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png"></p>
+            <p class="completed">Weather description: {{description}}</p>
+            <p class="completed">Temperature: {{temp}} ℃</p>
+            <p class="completed">Perceived temperature: {{feels_like}} ℃</p>
+            <p class="completed">Minimum temperature: {{temp_min}} ℃</p>
+            <p class="completed">Maximum temperature: {{temp_max}} ℃</p>
+            <p class="completed">Humidity: {{humidity}}%</p>
+            <p class="completed">Wind speed: {{speed}} meter/sec</p>
+            <p class="completed">Sunrise: {{sunrise}}</p>
+            <p class="completed">Sunset: {{sunset}}</p>
+        </div>
+    </script>
+</body>
+</html>

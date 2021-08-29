@@ -1,0 +1,16 @@
+html, body{
+    background-color: rgb(207, 137, 44);
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+input, button{
+    margin: 15px;
+}
+#weatherContainer{
+    margin: 15px;
+    width: 750px;;
+}
+img{
+    float: right;
+}
