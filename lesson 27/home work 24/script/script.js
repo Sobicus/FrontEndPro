@@ -14,16 +14,21 @@ function initGame() {
       TILES[i].push(createTileEl(tileIndex));
     }
   }
-  test ();
 
   renderTiles();
 }
 
 function test () {
-  // let valueCount = 0;
-  let myCount = document.getElementById("strokeCounter");
-  myCount.textContent = `Stroke counter ${valueCount}`;
+  let valueCount = 0;
+  document.getElementById("strokeCounter").textContent = `Stroke counter ${valueCount}`;
+  return function(){
+    valueCount++;
+    return valueCount++;}
 }
+// let counter = test();
+// counter();
+let counter = test();
+
 
 function getRandomIndex() { //рандомит поля плиточек
   let availableIdx = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
@@ -54,6 +59,7 @@ function renderTiles() { // рендерет тайлы
 }
 
 function onTileClick(e) {//обработка клика на одной плиточке
+  counter();
   if (e.target.classList.contains("tile")) {
     const id = +e.target.textContent;
     if (id) {
