@@ -18,16 +18,26 @@ function initGame() {
   renderTiles();
 }
 
-function test () {
+//тут я пробую релизовать счетчик ходов
+function counter () {
   let valueCount = 0;
   document.getElementById("strokeCounter").textContent = `Stroke counter ${valueCount}`;
   return function(){
     valueCount++;
     return valueCount++;}
 }
-// let counter = test();
-// counter();
-let counter = test();
+
+let counterSteps = counter();
+
+// Проверка выиграл ли игрок
+function won(arr) {
+  if (arr[arr.length - 1] == "empty") return;
+  for (let i = 0; i < arr.length - 1; i++){
+      if (i + 1 == arr[i]){ continue; }
+      else { return false;}
+  }
+  return true;
+}
 
 
 function getRandomIndex() { //рандомит поля плиточек
@@ -59,7 +69,7 @@ function renderTiles() { // рендерет тайлы
 }
 
 function onTileClick(e) {//обработка клика на одной плиточке
-  counter();
+  counterSteps();
   if (e.target.classList.contains("tile")) {
     const id = +e.target.textContent;
     if (id) {
@@ -67,6 +77,13 @@ function onTileClick(e) {//обработка клика на одной пли�
     }
   }
   renderTiles();
+
+  //проверка на победу
+  if (won(TILES)){
+    alert( "You won!");
+  } else {
+    console.log("keep trying");
+  }
 }
 
 function swapTiles(id) {
